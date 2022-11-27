@@ -1,0 +1,51 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../utils/functions" as *;
+
+body {
+  display: grid;
+  place-items: center;
+  background: url(/images/bg-pattern.svg) no-repeat, $clr-main-bg;
+  background-size: auto 50%;
+  min-height: 100vh;
+  padding: rem(90) rem(25) rem(90);
+  font-family: $txt-primary-font;
+
+  @include breakpoint(medium) {
+    body {
+      padding-top: rem(104);
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: rem(64);
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.gap-fluid {
+  gap: clamp(rem(34), 2vw, rem(40));
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.bs-card {
+  box-shadow: 0 rem(20) rem(30) rem(-5) rgba(rgb(41, 51, 86), 0.15);
+}

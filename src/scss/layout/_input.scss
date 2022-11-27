@@ -1,0 +1,86 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../utils/functions" as *;
+
+:root {
+  --left: 50;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]::-moz-range-thumb {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  margin-top: rem(-14);
+  height: $thumb-dimensions;
+  width: $thumb-dimensions;
+  border-radius: $thumb-br;
+  cursor: pointer;
+  background: url(/images/icon-slider.svg) center no-repeat, $thumb-bg;
+  box-shadow: $thumb-bs;
+  transition: background 250ms;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: $thumb-dimensions;
+  width: $thumb-dimensions;
+  border-radius: $thumb-br;
+  cursor: pointer;
+  background: url(/images/icon-slider.svg) center no-repeat, $thumb-bg;
+  box-shadow: $thumb-bs;
+  transition: background 250ms;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  background-color: $thumb-hover-bg;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  background-color: $thumb-active-bg;
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+  background-color: $thumb-hover-bg;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+  background-color: $thumb-active-bg;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: $track-h;
+  cursor: pointer;
+  background: $track-bg;
+  border-radius: $track-br;
+  background-image: linear-gradient(
+    to right,
+    hsl(174, 77%, 80%) calc(var(--left) * 1%),
+    transparent 0%
+  );
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: $track-h;
+  cursor: pointer;
+  background: $track-bg;
+  border-radius: $track-br;
+  background-image: linear-gradient(
+    to right,
+    hsl(174, 77%, 80%) calc(var(--left) * 1%),
+    transparent 0%
+  );
+}

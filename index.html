@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/style.css" />
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body>
+    <main class="container">
+      <!-- HEADER -->
+      <header class="header">
+        <h1 class="header__heading">Simple, traffic-based pricing</h1>
+        <p class="header__body txt-center">
+          Sign-up for our 30-day trial. <br class="header__body--br" />
+          No credit card required.
+        </p>
+      </header>
+
+      <form action="" class="pricing-component grid gap-fluid bs-card">
+        <span class="pricing-component__views">100k pageviews</span>
+        <input
+          type="range"
+          class="pricing-component__views-range"
+          name="range"
+          id="range"
+          min="1"
+          max="5"
+          value="3"
+          step="1"
+        />
+        <div class="pricing-component__price flex ai-c">
+          <span class="pricing-component__price--price">$16.00</span>
+          <span class="pricing-component__price--billing-frequency"
+            >/ month</span
+          >
+        </div>
+        <label class="pricing-component__toggle flex" for="billing-freq">
+          <span class="pricing-component__toggle--freq-option monthly"
+            >Monthly Billing</span
+          >
+          <input type="checkbox" name="billing-freq" id="billing-freq" />
+          <div class="toggle">
+            <span class="toggle__flicker flicker"></span>
+          </div>
+          <span class="pricing-component__toggle--freq-option yearly"
+            >Yearly Billing</span
+          >
+        </label>
+
+        <!-- FOOTER -->
+        <section class="pricing-component__footer flex">
+          <div class="pricing-component__footer--features flex">
+            <span
+              class="pricing-component__footer--features--feature flex ai-c"
+            >
+              <img src="/images/icon-check.svg" alt="check icon" />
+              <span>Unlimited websites</span>
+            </span>
+            <span
+              class="pricing-component__footer--features--feature flex ai-c"
+            >
+              <img src="/images/icon-check.svg" alt="check icon" />
+              <span>100% data ownership</span>
+            </span>
+            <span
+              class="pricing-component__footer--features--feature flex ai-c"
+            >
+              <img src="/images/icon-check.svg" alt="check icon" />
+              <span>Email reports</span>
+            </span>
+          </div>
+          <button class="pricing-component__footer--submit-btn">
+            Start my trial
+          </button>
+        </section>
+      </form>
+    </main>
+
+    <script src="/src/js/app.js"></script>
+  </body>
+</html>
